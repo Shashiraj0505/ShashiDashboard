@@ -9,7 +9,7 @@ public class DashboardController {
 @GetMapping("/msg")
 	public String getMessages() {
 		
-		String msg="This is myTest of Jenkins";
+		String msg="This is myTest of Jenkins form 2 nd Test ";
 		return msg;
 	}
 }

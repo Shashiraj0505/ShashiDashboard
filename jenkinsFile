@@ -1,45 +1,44 @@
-pipline{
+pipeline{
     
     agent any
-    steps{
+    stages{
         
-        stage ('Compile Stage'){
-                  
-                  steps{
-                      
-                      withMaven(maven:'MAVEN_HOME'){
-                          sh 'mvn clean compile'
-                          
-                      }
+        stage('Compile Stage'){
+            
+           steps{
+               
+               withMaven(maven:'MAVEN_HOME'){
+                   
+                   sh 'mvn clean compile'
+               }
 
-                  }
+           }
 
-              }
-               stage ('Testing Stage'){
-                  
-                  steps{
-                      
-                      withMaven(maven:'MAVEN_HOME'){
-                          sh 'mvn test'
-                          
-                      }
+        }
+ 		stage('Testing  Stage'){
+            
+           steps{
+               
+               withMaven(maven:'MAVEN_HOME'){
+                   
+                   sh 'mvn test'
+               }
 
-                  }
+           }
 
-              }
-   				stage ('Deploye Stage'){
-                  
-                  steps{
-                      
-                      withMaven(maven:'MAVEN_HOME'){
-                          sh 'mvn deploy'
-                          
-                      }
+        }
+         stage('Compile Stage'){
+            
+           steps{
+               
+               withMaven(maven:'MAVEN_HOME'){
+                   
+                   sh 'mvn deploy'
+               }
 
-                  }
+           }
 
-              }
-
+        }
     }
 
 }

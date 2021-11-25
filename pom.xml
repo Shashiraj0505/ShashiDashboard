@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.shashi</groupId>
-	<artifactId>JenkinsTestApp</artifactId>
+	<artifactId>ShashiDashboard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>JenkinsTestApp</name>
-	<description>This is test Appp</description>
+	<name>ShashiDashboard</name>
+	<description>This is test Appp of Jenkins</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
